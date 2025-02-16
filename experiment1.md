@@ -16,9 +16,8 @@
 - Voltage source VGG = 0.9V
 
 
-**CIRCUIT DIAGRAM**:
+![**CIRCUIT DIAGRAM**](https://github.com/user-attachments/assets/6a264d54-8c24-48e5-b80f-b56bb802bf07)
 
-![CIRCUIT DIAGRAM](Screenshot 2025-02-16 213929.png)
  
  **PROCEDURE**:
  
