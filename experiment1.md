@@ -82,4 +82,20 @@
 
 
 ## INFERENCE 
+- Since here we have used the MOSFET working as an amplifier, the region of the Mosfet should be the saturation region
+So during each analysis, and while assigning the values for the parameters, such as width and length, we have to ensure that the transistor is working in the saturation region Once we obtained the current that is (VGD<Vth) 
+And VGD= VG -VD
+- From the DC analysis of the CS amplifier, it was observed that with increase in the value of width, the value of the current will also increase is directly proportional to width and inversely proportional to the length 
+Id= 1/2(kn.W/L.VOV^2) 
+When the value of the width is increased to twice of it, the current will not exactly increase to 2 times of it, but a little lesser than that this is because of the channel length modulation
+- CALCULATION:
+Power = 50uW
+
+Loop Equation: Vdd=Vds+Id*Rd
+
+P=I*V (Id=27.08uA , Vdd=1.8V)
+- The transient response graph confirms that the circuit transitions smoothly over time. The circuit responds effectively to input variations, indicating stable operation.
+- The AC response graph confirms that the circuit maintains stability over the tested frequency range.
+- The gain(4 dB) and phase shift (which is nearly 180deg) align with theoretical expectations.The circuit functions as expected under AC conditions.
+
 
