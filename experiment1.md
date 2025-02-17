@@ -184,6 +184,20 @@ By analyzing the AC, one can determine gain, bandwidth, phase, and other charact
 
 ![**AC Analysis**](https://github.com/shivaanii33/LIC-Lab/blob/cfe6b32fc53bf6aff9e46231e061ccf20323a67d/images/Screenshot%202025-02-17%20230423.png)
 
+---
+
+# Inference:
+**DC Analysis**
+- The drain current (ID) is around 27.78A, ensuring that the MOSFET operates in the desired region.
+- Proper biasing conditions provide a stable and reliable amplification setup.
+
+**AC Analysis**
+- The gain and bandwidth were analyzed using an AC sweep, helping to understand frequency response.
+- The amplifier performs well across a range of frequencies, including cutoff frequencies and phase behavior, making it suitable for various applications.
+
+**Transient Analysis**
+- The amplifier accurately reproduces the input signal without distortion, proving its effectiveness.
+- The design meets the expected performance criteria and follows theoretical predictions, demonstrating its feasibility in practical applications.
 
 
 
