@@ -43,27 +43,40 @@
 ## **Results**
 
 **DC analysis**:
+
+
 ![**DC Analysis**](https://github.com/shivaanii33/LIC-Lab/blob/a2e7792216f34f35c2d6729522f7ddca4c611f78/Screenshot%202025-02-16%20223019.png)
 
+
+
 *Result when the width is changed to 2u*
+
 ![**DC Analysis**](https://github.com/shivaanii33/LIC-Lab/blob/91b65bb995e31e59b2d61a9a07c9a5c22f928099/Screenshot%202025-02-17%20193234.png)
 
+
 *since power budget is 50uW and vdd is given as 1.8v the current is expected to be around 27.7uA so,*
+
 ![**DC Analysis**](https://github.com/shivaanii33/LIC-Lab/blob/90c1ae5e4dcf181c45f5ba8f60c76defa849c150/images/Screenshot%202025-02-17%20195210.png)
+
 
 ![**DC Analysis**](https://github.com/shivaanii33/LIC-Lab/blob/cef8cb52a5b539df14a1e15b32d7279f91930f54/images/Screenshot%202025-02-17%20195159.png)
 
 
 **transient analysis**
+
 ![**Transient Analysis**](https://github.com/shivaanii33/LIC-Lab/blob/3b5fd6be15d3d642b0dec34118fb002b744bec7e/images/Screenshot%202025-02-17%20195936.png)
 
+
 ![**Transient Analysis**](https://github.com/shivaanii33/LIC-Lab/blob/6a66d9d98ce1d1d78b31a285663990adff9e5979/images/Screenshot%202025-02-16%20224337.png)
+
 
 ![**Transient Analysis**](https://github.com/shivaanii33/LIC-Lab/blob/53b9756304a5671c2cc261bb2e2c17c8f2365143/images/Screenshot%202025-02-17%20183019.png)
 
 
 **frequency analysis**
+
 ![**ac  Analysis**](https://github.com/shivaanii33/LIC-Lab/blob/02d000ddcff2812b2899f742c7bd16ddf72aca53/images/Screenshot%202025-02-17%20200800.png)
+
 
 ![**ac  Analysis**](https://github.com/shivaanii33/LIC-Lab/blob/c5aa1ec3d8c2e7e695befa5d8ccf85bf4950575a/images/Screenshot%202025-02-17%20185727.png)
 
