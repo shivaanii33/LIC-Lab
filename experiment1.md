@@ -99,3 +99,91 @@ P=I*V (Id=27.08uA , Vdd=1.8V)
 - The gain(4 dB) and phase shift (which is nearly 180deg) align with theoretical expectations.The circuit functions as expected under AC conditions.
 
 
+# Design 2:
+
+
+Replacing the resistor of design 1 by another pmos:
+
+**CIRCUIT DIAGRAM**:
+
+
+![**CIRCUIT DIAGRAM**](https://github.com/shivaanii33/LIC-Lab/blob/cfe6b32fc53bf6aff9e46231e061ccf20323a67d/images/Screenshot%202025-02-17%20231924.png )
+
+---
+
+**COMPONENTS**:
+
+- TSMC 180nm nmos-4
+- TSMC 180nm pmos-4
+- Voltage source VDD = 1.8V
+- Voltage source VGG = 0.9V
+---
+**PROCEDURE**:
+
+- Make the circuit connection as show above.
+- Connect DC power supply to the gate terminal of each mos
+- Connect the source terminal of nmos to the ground.
+- Connect the source terminal of pmos to VDD 1.8V
+- Connect the drain terminals of each mosfet.
+- Proceed with different analysis and find the required parameters.
+---
+
+## DC Analysis:
+
+
+Our approach in conducting DC analysis involves identifying the quiescent operating point (ID) and node voltages that are required to operate the MOSFET.
+
+- **Supply Voltage (VDD)**: 1.8V  
+- **Gate Voltage (VG)**: 0.9V  
+- **Power Budget (P)**: 50μW  
+
+*The Figure below shows the Values obtained from the DC Analysis :*
+
+![**DC Analysis**](https://github.com/shivaanii33/LIC-Lab/blob/cfe6b32fc53bf6aff9e46231e061ccf20323a67d/images/Screenshot%202025-02-17%20225416.png)
+
+
+
+---
+## Transient Analysis
+
+
+By examining the transient response of the amplifier, it is possible to determine its behavior over time when subjected to the sinusoidal input.
+
+**Parameters**
+
+- Stop Time: 5m (5 milliseconds)
+
+The transient analysis provides information about the amplifier's time-domain behavior, such as distortion, settling time, and waveform reproduction.
+
+ *The Graph below shows the Transient Response of the Given Design;*
+ 
+![**Transient Analysis**](https://github.com/shivaanii33/LIC-Lab/blob/cfe6b32fc53bf6aff9e46231e061ccf20323a67d/images/Screenshot%202025-02-17%20225536.png)
+
+
+--- 
+## AC Analysis
+
+A sinusoidal input is included in the AC analysis through a modification of gate voltage.
+
+**Sinusoidal Input Voltage**
+
+- DC Offset: 0.9V  
+- Amplitude: 50mV  
+- Frequency: 1kHz
+
+**Frequency Sweep Parameters**
+
+- Type: Decade  
+- Sweeps per Decade: 20  
+- Start Frequency: 0.1Hz  
+- Stop Frequency: 1THz  
+
+By analyzing the AC, one can determine gain, bandwidth, phase, and other characteristics of the amplifier's frequency response.
+
+*The Graph below shows the AC Analysis of the Given Design;*
+
+![**AC Analysis**](https://github.com/shivaanii33/LIC-Lab/blob/cfe6b32fc53bf6aff9e46231e061ccf20323a67d/images/Screenshot%202025-02-17%20230423.png)
+
+
+
+
