@@ -125,7 +125,7 @@ For the **DC Operating Point:**
 
 ![DC operating](https://github.com/shivaanii33/LIC-Lab/blob/83c926784733f49900df362a2f24909725d5c9a9/images/Screenshot%202025-03-04%20010201.png)
 
-- SPICE Netlist
+- SPICE output log
 
 ![DC operating](https://github.com/shivaanii33/LIC-Lab/blob/b9f937da41d45a25a75f579fd065d40de742de77/images/Screenshot%202025-03-04%20010311.png)
 
