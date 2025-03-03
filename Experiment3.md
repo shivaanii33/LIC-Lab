@@ -95,7 +95,59 @@ Hence the required Qpoint for both the transistors are (*since both halk of circ
 - Add the transistor NMOS4 and Change the name of the transistor to CMOSN
 - Assign the specified values for the voltages and the resistors
 - Now we can start finding appropriate Aspect Ratio for our MOSFET, we will take a range and combination of values for W (width) and L (length) of the MOSFET
-- After getting a suitable value we will perform Transient and AC Analysis
+- After getting a suitable value we will perform Transient and AC Analysis.
+
+  
+**Effect of L (Channel length)**
+
+For this analysis we will keep Rd=3.428Kohm and Rss=685.7ohm and perform a Linear parameter sweep for W and List paramter sweep for L, with the help of the commands
+
+.step param W 30n  250n 1n
+
+Keep L = 180nm , then you will get a curve for ID vs W for L = 180 nm\
+
+![idvsw](https://github.com/shivaanii33/LIC-Lab/blob/cd5eea4a11ad5b6a6028ef5c6d2d9c624667b448/images/Screenshot%202025-03-04%20003531.png)
+
+![idvsw](https://github.com/shivaanii33/LIC-Lab/blob/99e486abeae8c2dd28387f122e5778e25f058ded/images/Screenshot%202025-03-04%20003616.png)
+
+from this we'll get to know the range of w for which the required amount of current can be obtained 
+ 
+ > for around **w=2.4858537µm, l=180nm** the value of the required parameters will be almost equal.
+
+ ---
+
+
+For the **DC Operating Point:**
+
+- Go to Simuate -> Configure Analysis -> DC operating point
+- Add the .op text on the experiment workspace
+- Click on the Play button to turn on the simulation, this will generate a text file with all the voltages and currents for more info go to View -> SPICE Output Log
+
+![DC operating](https://github.com/shivaanii33/LIC-Lab/blob/83c926784733f49900df362a2f24909725d5c9a9/images/Screenshot%202025-03-04%20010201.png)
+
+- SPICE Netlist
+
+![DC operating](https://github.com/shivaanii33/LIC-Lab/blob/b9f937da41d45a25a75f579fd065d40de742de77/images/Screenshot%202025-03-04%20010311.png)
+
+**The valvue of Gm is 1.12e-03**
+
+**The value of Vt=0.489V**
+
+---
+
+*Also we have to verify that the transistor is working in saturation region, this can be done by checking that whether VGD is greater than or lesser that Vt*
+
+For VGD=VG-VD=1.6-1.70
+
+VGD = -0.10 , but Vt=0.489V
+
+Hence **VGD<Vt**; therefore mosfets are in saturation region.
+
+
+
+
+
+
 
 
 
