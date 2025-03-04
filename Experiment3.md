@@ -95,9 +95,8 @@ Hence the required Qpoint for both the transistors are (*since both halk of circ
 - Add the transistor NMOS4 and Change the name of the transistor to CMOSN
 - Assign the specified values for the voltages and the resistors
 - Now we can start finding appropriate Aspect Ratio for our MOSFET, we will take a range and combination of values for W (width) and L (length) of the MOSFET
-- After getting a suitable value we will perform Transient and AC Analysis.
+- After getting a suitable value we will perform Transient and AC Analysis
 
-  
 **Effect of L (Channel length)**
 
 For this analysis we will keep Rd=3.428Kohm and Rss=685.7ohm and perform a Linear parameter sweep for W and List paramter sweep for L, with the help of the commands
@@ -125,7 +124,7 @@ For the **DC Operating Point:**
 
 ![DC operating](https://github.com/shivaanii33/LIC-Lab/blob/83c926784733f49900df362a2f24909725d5c9a9/images/Screenshot%202025-03-04%20010201.png)
 
-- SPICE output log
+- SPICE Netlist
 
 ![DC operating](https://github.com/shivaanii33/LIC-Lab/blob/b9f937da41d45a25a75f579fd065d40de742de77/images/Screenshot%202025-03-04%20010311.png)
 
@@ -143,20 +142,35 @@ VGD = -0.10 , but Vt=0.489V
 
 Hence **VGD<Vt**; therefore mosfets are in saturation region.
 
+## Transient Analysis
+Transient analysis helps in understanding the time-domain behavior of the circuit when subjected to a varying input signal. 
+> The simulation set up for the transient analysis is as mentioned below.
 
+![transient simusetup](https://github.com/shivaanii33/LIC-Lab/blob/4a3c6d34d5899d7874191c48ed9733999e267e99/images/Screenshot%202025-03-04%20230524.png)
 
+> If both inputs of a differential amplifier are equal during transient analysis, the output should ideally be zero, since the amplifier amplifies the difference between the inputs:
 
+![bothinputeq](https://github.com/shivaanii33/LIC-Lab/blob/9255734fc6091b827c3a64f71fb507ca22069b85/images/Screenshot%202025-03-04%20224130.png)
 
+The amplifier is designed to amplify differences, not identical signals.
+When inputs are equal, the circuit operates in common mode, which should be rejected.
+Vout= Ad(V1-V2); if V1=V2 then **Vout=0**
 
+*Hence both the inputs should be different. so we can give 180deg phase shift for one of the input.*
 
+![phase](https://github.com/shivaanii33/LIC-Lab/blob/2d70b2dee767bc5525c781d5b68e6b671f7ee8ad/images/Screenshot%202025-03-04%20230542.png)
 
+>> The obtained results are as shown 
 
+![trans1](https://github.com/shivaanii33/LIC-Lab/blob/df8715fb5224298f2871283c07307975d00b8792/images/Screenshot%202025-03-04%20223603.png)
 
+![trans2](https://github.com/shivaanii33/LIC-Lab/blob/82f173d033cb3c467a008738c541435f709c13c8/images/Screenshot%202025-03-04%20223955.png)
 
+This transient analysis shows the response of a differential amplifier. The green waveform represents the differential input signal (V1-V2) , while the blue waveform represents the differential output (Vocm1-Vocm2). The amplifier effectively amplifies the input signal while rejecting common-mode noise. 
 
+## Frequency Response 
 
-
-
+![freq](https://github.com/shivaanii33/LIC-Lab/blob/0d1af10cb6a7796874d6dfd88dac80ccc97f58ab/images/Screenshot%202025-03-05%20000357.png)
 
 
 
