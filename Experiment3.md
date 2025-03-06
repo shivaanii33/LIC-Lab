@@ -1,4 +1,3 @@
-
 # Experminet 3:- MOS Differential Amplifier 
 ## AIM:Design and analyse the MOS differential amplifier circuit for the given specification.
 - VDD=3.2V
@@ -56,8 +55,8 @@ Let’s assume for the moment that the transistors are in saturation. The equati
 
   - **Rss=685.7ohm**
 
-  ![circuit diagram](https://github.com/shivaanii33/LIC-Lab/blob/67beca572dd9a0f113d403dfc330372014220758/images/Screenshot%202025-03-06%20213756.png)
-  
+  ![circuit diagram](https://github.com/shivaanii33/LIC-Lab/blob/52110e1853d4575edfdec76bafaeec429ba6d917/images/Screenshot%202025-03-03%20225209.png)
+  adddd newww oneeee
 
 ### 1) DC Analysis:
 The DC Analysis of a MOS Differential Amplifier determines the operating point (biasing conditions) of the transistors by sweeping the input voltages and analyzing the DC output voltages and currents.
@@ -82,7 +81,7 @@ VDS = 3.2-(0.4375m)(3.428K)-0.56
 
 - **VDS=1.14V**
 
-Hence the required Qpoint for both the transistors are (*since both halk of circuits are mirror's of each other*)
+Hence the required Qpoint for both the transistors are (*since both half of circuits are mirror's of each other*)
 
 - **M1 Q-Point(VDS1,Id1) -> (1.14V,0.4375mA)**
 - **M2 Q-Point(VDS2,Id2) -> (1.14V,0.4375mA)**
@@ -166,11 +165,271 @@ Vout= Ad(V1-V2); if V1=V2 then **Vout=0**
 
 ![trans2](https://github.com/shivaanii33/LIC-Lab/blob/82f173d033cb3c467a008738c541435f709c13c8/images/Screenshot%202025-03-04%20223955.png)
 
+differential gain = Voutdiff/Vindiff
+
+- **Av*diff* =  324.65441mV/99.470253mV = 3.217V/V**
+- **The valvue of Gm is 1.12e-03**
+- **Overall gain Av= gm*rd= 3.53V/V**
+
 This transient analysis shows the response of a differential amplifier. The green waveform represents the differential input signal (V1-V2) , while the blue waveform represents the differential output (Vocm1-Vocm2). The amplifier effectively amplifies the input signal while rejecting common-mode noise. 
 
 ## Frequency Response 
 
 ![freq](https://github.com/shivaanii33/LIC-Lab/blob/0d1af10cb6a7796874d6dfd88dac80ccc97f58ab/images/Screenshot%202025-03-05%20000357.png)
+
+
+> From the graph the gain in db scale is **11.187db-3db= 8.187db**
+
+# Circuit 2 
+![circuit2](https://github.com/shivaanii33/LIC-Lab/blob/4e772f37a3f15a1cfb1dc6549e6d79ed4383b471/Screenshot%202025-03-06%20231213.png)
+
+Replacing \( R3 \) with a current source \( Iss \) transforms the circuit into a fully differential pair with an active current source. This modification eliminates source degeneration, increasing the **gain** and improving **common-mode rejection (CMRR)**. The current source ensures a stable **bias current**, making the circuit less sensitive to variations in component values. Without \( R3 \), the **transconductance \( g_m \) is higher**, resulting in a larger differential gain given by \(**Ad=gm*rd**). 
+
+---
+## DC Analysis 
+
+*The procedure is same as the above mentioned for the previous circuit*
+
+![dc2](https://github.com/shivaanii33/LIC-Lab/blob/8ceacf6fcaf63dc9b2647701f234fe66a4c21351/images/Screenshot%202025-03-06%20231829.png)
+
+Mosfet aspect ratio was same ie, **L= 180.1nm, W =2.4858537µm**
+
+for mosfet M1 & M2:
+
+Vocm = 1.70025v
+
+ViCM = 1.6V
+
+Id= 0.4375 mA
+
+Vtn = 0.489v
+
+VGS = 1.6 - 0.593613 = 1.01V
+
+VDD = IdRd + VDS +Vp
+
+VDS = 1.11
+
+
+The Q-point of both the mosfets are **(1.1V, 0.4375mA)**.
+
+---
+## Transient Analysis:
+
+>>The below graph represents the transient analysis between the differential input and the differential output of the mos differential amplifier 
+
+![freq](https://github.com/shivaanii33/LIC-Lab/blob/253335854b7c7ae88f716d3c47b3826d3bf1f9f3/images/Screenshot%202025-03-07%20014236.png)
+
+>* The value of the diff gain is given by **Avdiff=326.61m/99m**
+- **Avdiff=3.366V/V**
+
+
+>>From the graph ,we can observe the 180 degree phase shift in the output signal and the output voltage (at Vocm node) is amplified .
+
+![freq](https://github.com/shivaanii33/LIC-Lab/blob/6578a86f8dac16bf131040adc53522e4e11eed9d/images/Screenshot%202025-03-07%20014001.png)
+
+
+From the above observation 
+- **Gain Av=Vout(peak)/Vin(peak)**
+- **Av=1.863/1.65=1.129V/V**
+
+Overall gain = **gm*rd**
+- **Av(overall)= 3.83V/V**
+
+---
+
+## Frequency analysis 
+
+![freq](https://github.com/shivaanii33/LIC-Lab/blob/573fb0c43a2040d4c812b998d814b5c9a12f8e19/images/Screenshot%202025-03-07%20014650.png)
+
+From the graph , the gain in dB scale is **10.45dB - 3dB =7.45db**
+
+---
+
+# Circuit 3 
+
+This circuit is obtained by replacing the current source of 2nd circuit by the nmos 
+
+The value for Vb is given by **Vb=Vtn+Vp=0.489+0.6=1.089V**
+
+
+![freq](https://github.com/shivaanii33/LIC-Lab/blob/a6d2bec98b3daa89a74ce6792fc8a530452596f7/images/Screenshot%202025-03-07%20025703.png)
+
+
+In this circuit, an NMOS transistor (M3) is used in place of the current source (Iss) and resistor (Rss). However, to maintain the same operating point, the drain current of M3 must still be equal to Iss = 0.875mA.
+
+Since the circuit remains symmetrical, the values of Rd1 and Rd2 remain unchanged at 3428Ω. This is because the same drain currents (Id1 and Id2) continue to flow through the differential pair, and the voltage conditions remain the same.
+
+Also,
+
+Vds = Vocm - Vp = 1.1V
+
+Vgs = Vicm - Vp = 1V
+
+But we have to set the voltage Vg of M3 for drain current 0.875mA to flow. 
+
+For this :-
+
+- Set up the circuit and give the value for the resistors based on the above analysis.
+- Set the voltage of Vg = {V}'.
+- Go to the Spice directive and write ".lib tsmc018.lib" and ".step param V 0V 5V".
+- Now right click on the MOSFET, set the value of the channel length and width of the MOSFET same as previous circuit i,e L=180nm and W=2.525µ.
+- Then run the simulating in DC op pnt mode, a co-ordinate plane will popup now bring the cursor on the wire near the drain of MOSFET M3 and select the current.
+- On the graph right click, select "Add Traces" and give the value of the drain current of MOSFET M3 (0.875mA) there.
+- Use "Place_Cursor on Active Trace" using the cursor we find the intesection of this two line as 1.432V, which is the gate voltage Vg of MOSFET M3.
+- Set the Vg = 0.875mA for the M3 MOSFET.
+- Then click on the run icon, you will get :-
+
+![freq](https://github.com/shivaanii33/LIC-Lab/blob/1116e0b6857c22374a9a1c17b55ab437d419b384/images/Screenshot%202025-03-07%20025920.png)
+
+
+Here we can see Id = 0.437425mA , Vds = 1.70051-0.5991 = 1.1V (Vds = Vd-Vs), Id(M3)=0.874851V Vp = 0.5991V and Vocm = 1.70051V ,which is equal to the analysis we have done.
+
+## Transient Analysis.
+Procedure for Transient analysis in LTSpice
+
+- Remove the ".op".
+- Right click on the Vicm1 and select "Advanced".
+- Then on the function select "SINE".
+- Set DC offset = 1.6V, Amplitude = 50mV and Frequency = 1kHz.
+- Then click "ok".
+- Run the simulation by selecting "Transient" mode and setting Stop time as 5ms (Since freq = 1kHz, time period = 1ms and this 5ms simulation time allows you to capture 5 full cycles of the sine wave.
+- You will get:-
+
+![freq](https://github.com/shivaanii33/LIC-Lab/blob/35d42d2d0460f207eac10fb980b74a230f25c6d4/images/Screenshot%202025-03-07%20024628.png)
+
+Here we can see that the amplitude of the output waveform is 1.7901093-1.6971968 = 0.0929125V. The input amplitude is 50mV so Gain, Av = -Vout/Vin = -0.0929125V/50mV = -1.85825. Therefore, Gain,Av = -1.85825.
+
+---
+
+## AC Analysis.
+
+Procedure for AC analysis in LTSpice
+
+- Right click on the Vicm1 and on the Small signal AC Analysis set Amplitude = 1.
+- (Amplitude = 1 is a standard practice because Gain, Av = -Vout/Vin and Vin (AC Amplitude) = 1V, then Gain=Vout
+- Click on the run icon and select the AC Analysis mode.
+- Set Type of sweep = Decade, Number of points per decade = 20 and Start frequency = 1Hz and Stop frequency = 2THz.
+- Click "ok".
+- Then you will get :-
+
+![freq](https://github.com/shivaanii33/LIC-Lab/blob/0eac1932cae830babdadadf5e18cef37dc3fde30/images/Screenshot%202025-03-07%20024809.png)
+
+---
+
+
+# Inference 
+
+
+In a **MOS differential amplifier**, the choice of the tail current source significantly impacts **gain, output swing, and common-mode rejection ratio (CMRR)**. This document compares three configurations: using a **resistor (Rss)**, an **ideal current source (Iss)**, and an **NMOS current source**.
+
+---
+
+##  Using a Resistor (Rss) as Tail Current Source
+
+### Differential Gain: **Moderate**
+- The gain is limited because the resistor sets the tail current passively.
+- Gain equation:
+  ```math
+  A_d = \frac{g_m R_D}{1 + g_m R_{SS}}
+  ```
+
+###  Output Voltage Swing: **Limited**
+- The resistor causes a voltage drop, reducing the available output swing.
+
+###  Common-Mode Rejection Ratio (CMRR): **Low**
+- The low impedance of the resistor allows common-mode noise to affect both transistors in the differential pair.
+
+**Reason:**
+- The resistor does not actively control current flow, so it limits performance in gain, swing, and noise rejection.
+
+---
+
+## Using an Ideal Current Source (Iss) as Tail Current Source
+
+###  Differential Gain: **Higher**
+- The ideal current source provides a **fixed** tail current, improving gain.
+- Gain equation:
+  ```math
+  A_d \approx g_m R_D
+  ```
+
+###  Output Voltage Swing: **Improved**
+- Since the current source doesn’t introduce a voltage drop, more supply voltage is available for the output swing.
+
+###  Common-Mode Rejection Ratio (CMRR): **Better**
+- High impedance isolates the differential pair from common-mode signals.
+
+**Reason:**
+- A stable current improves amplifier efficiency and noise rejection.
+
+---
+
+## Using an NMOS Current Source as Tail Current Source
+
+### Differential Gain: **Highest**
+- The NMOS current source provides high output resistance, leading to maximum gain.
+
+### -  Output Voltage Swing: **Best**
+- The NMOS current source minimizes voltage loss in the tail, allowing a **wider** output swing.
+
+###  Common-Mode Rejection Ratio (CMRR): **Maximum**
+- The highest impedance results in superior isolation from noise and power fluctuations.
+
+**Reason:**
+- The NMOS current source actively adjusts to maintain a steady current, optimizing performance.
+
+---
+
+##  Summary of Performance Comparison
+
+| Tail Current Source  | Gain | Output Swing | CMRR |
+|----------------------|------|-------------|------|
+| **Resistor (Rss)**  | Moderate | Limited | Low |
+| **Ideal Current Source (Iss)**  | Higher | Improved | Better |
+| **NMOS Current Source**  | Highest | Best | Maximum |
+
+###  **Key Takeaways:**
+- **A resistor limits performance** due to voltage drop and low impedance.
+- **An ideal current source improves gain, output swing, and CMRR.**
+- **An NMOS current source gives the best performance** in all aspects.
+ **For high-performance differential amplifiers, replacing Rss with an NMOS current source is the best choice!**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
