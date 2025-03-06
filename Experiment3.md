@@ -55,8 +55,10 @@ Let’s assume for the moment that the transistors are in saturation. The equati
 
   - **Rss=685.7ohm**
 
-  ![circuit diagram](https://github.com/shivaanii33/LIC-Lab/blob/52110e1853d4575edfdec76bafaeec429ba6d917/images/Screenshot%202025-03-03%20225209.png)
-  adddd newww oneeee
+  ![circuit diagram](https://github.com/shivaanii33/LIC-Lab/blob/067b85dc245792f3cc2defb34cfe3813e3d8260e/images/Screenshot%202025-03-06%20213756.png)
+
+  ---
+ 
 
 ### 1) DC Analysis:
 The DC Analysis of a MOS Differential Amplifier determines the operating point (biasing conditions) of the transistors by sweeping the input voltages and analyzing the DC output voltages and currents.
