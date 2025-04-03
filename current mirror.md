@@ -113,13 +113,13 @@ also,<br>
 ### DC ANALYSIS :<br>
 
 #### For L = 180n <br>
-![180n 1isto1 ](https://github.com/user-attachments/assets/2ae367a1-67bd-4a50-9f41-e3619660f385)
+![180n 1isto1 ](C:\Users\shiva\OneDrive\Pictures\Screenshots\Screenshot 2025-04-04 001653.png)
 
 #### For L = 500n <br>
-![500n 1isto 1 ratio](https://github.com/user-attachments/assets/99844176-eb9c-4a57-91bf-40834ee129d3)
+![500n 1isto 1 ratio]()
 
 #### For L = 1u <br>
-![1u 1isto 1 ratio](https://github.com/user-attachments/assets/9b81d8a3-2b08-46f4-97c9-ffa150476baa)
+![1u 1isto 1 ratio]()
 
 #### COMPARISION TABLE :<br>
 
