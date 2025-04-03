@@ -113,13 +113,13 @@ also,<br>
 ### DC ANALYSIS :<br>
 
 #### For L = 180n <br>
-![180n 1isto1 ](C:\Users\shiva\OneDrive\Pictures\Screenshots\Screenshot 2025-04-04 001653.png)
+![180n 1isto1 ](https://github.com/shivaanii33/LIC-Lab/blob/9346f5b8a0b04e459ae7f2dbf26056b99f726300/images/Screenshot%202025-04-04%20001653.png)
 
 #### For L = 500n <br>
-![500n 1isto 1 ratio]()
+![500n 1isto 1 ratio](https://github.com/shivaanii33/LIC-Lab/blob/9346f5b8a0b04e459ae7f2dbf26056b99f726300/images/Screenshot%202025-04-04%20001708.png)
 
 #### For L = 1u <br>
-![1u 1isto 1 ratio]()
+![1u 1isto 1 ratio](https://github.com/shivaanii33/LIC-Lab/blob/9346f5b8a0b04e459ae7f2dbf26056b99f726300/images/Screenshot%202025-04-04%20001720.png)
 
 #### COMPARISION TABLE :<br>
 
@@ -230,15 +230,15 @@ also,<br>
 
 #### For L = 180n <br>
 
-![180n 1i2](https://github.com/user-attachments/assets/46b6011f-7350-4cf2-a957-cfcb104d3c73)
+![180n 1i2](https://github.com/shivaanii33/LIC-Lab/blob/9346f5b8a0b04e459ae7f2dbf26056b99f726300/images/Screenshot%202025-04-04%20001744.png)
 
 #### For L = 500n <br>
 
-![500n 1isto2](https://github.com/user-attachments/assets/d739dcde-ed18-4d8f-ab5f-ab006bcd885c)
+![500n 1isto2](https://github.com/shivaanii33/LIC-Lab/blob/9346f5b8a0b04e459ae7f2dbf26056b99f726300/images/Screenshot%202025-04-04%20001754.png)
 
 #### For L = 1u <br>
 
-![1u 1isto 2 ](https://github.com/user-attachments/assets/c44ea365-8b5d-4b2c-8583-1a1763839a5c)
+![1u 1isto 2 ](https://github.com/shivaanii33/LIC-Lab/blob/9346f5b8a0b04e459ae7f2dbf26056b99f726300/images/Screenshot%202025-04-04%20001805.png)
 
 #### COMPARISION TABLE :<br>
 
@@ -303,7 +303,7 @@ This circuit is a CMOS Differential Amplifier with a Current Mirror Load, common
 
 ### DC ANALYSIS :<br>
 
-![image](https://github.com/user-attachments/assets/3ee81caf-0256-4256-81db-bab6aa95763f)
+![image](https://github.com/shivaanii33/LIC-Lab/blob/a00ab8cf1dd6c01ae50a92310dbddcfa7b6979c6/images/Screenshot%202025-04-04%20002840.png)
 
 | Parameter    | Theoretical value  | Practical value |
 |--------------|--------------------|-----------------|
